@@ -1,10 +1,11 @@
 package com.jad;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Foo implements IFoo {
     private IBaz baz;
-    private List<IBar> bars;
+    private List<IBar> bars = new ArrayList<>();
     private IQux qux = new Qux();
     private ICorge corge;
 
@@ -32,7 +33,7 @@ public class Foo implements IFoo {
         return this.qux;
     }
 
-    private void addBar(IBar bar) {
+    public void addBar(IBar bar) {
         bars.add(bar);
     }
 }
